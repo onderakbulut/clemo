@@ -1,14 +1,33 @@
 "use client";
+import { useState, useEffect } from 'react';
 import './index.css';
 import { usePathname } from 'next/navigation'
 import Link from 'next/link';
 import Image from 'next/image'
 
 function Header() {
+    const [isSticky, setIsSticky] = useState(false);
     const pathname = usePathname();
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        };
+
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <header className={`header border-bottom border-gray-50 bg-white z-10 position-sticky top-0 position-lg-fixed`}>
+        <header className={`header border-bottom border-gray-50 bg-white z-10 position-sticky top-0 position-lg-fixed ${isSticky ? 'sticky-header' : ''}`}>
             <div className="container">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
