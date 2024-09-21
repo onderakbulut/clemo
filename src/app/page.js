@@ -7,6 +7,7 @@ const Works = dynamic(
 import Hero from '../components/hero/hero';
 import Services from '@/containers/services';
 import Team from '@/components/team/team';
+import Clients from '@/components/clients/clients';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <Works />
       <Team />
+      <Clients />
     </main>
   );
 }
