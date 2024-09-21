@@ -1,0 +1,31 @@
+:root {
+    --text-color: #000;
+    --bg-color: #fff;
+}
+
+.social.-dark {
+    --text-color: #fff;
+    --bg-color: #000;
+}
+
+.social > li > a {
+    display: block;
+    color: var(--text-color);
+    background: var(--bg-color);
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.social > li > a > svg {
+    font-size: 14px;
+}
+
+
+.social > li > a:hover {
+    background: var(--bs-peach-100);
+    color: var(--bg-color);
+}
+

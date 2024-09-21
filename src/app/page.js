@@ -8,6 +8,7 @@ import Hero from '../components/hero/hero';
 import Services from '@/containers/services';
 import Team from '@/components/team/team';
 import Clients from '@/components/clients/clients';
+import Contact from '@/components/contact/contact';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Works />
       <Team />
       <Clients />
+      <Contact />
     </main>
   );
 }

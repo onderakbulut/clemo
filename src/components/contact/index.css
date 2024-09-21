@@ -1,0 +1,25 @@
+.contact:not(.-light) {
+    background-image: url('/images/contact.jpg');
+    background-size: cover;
+    position: relative;
+}
+.contact:not(.-light)::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.contact:not(.-light) form input::placeholder {
+    color: var(--bs-brown-50);
+    font-size: 18px;
+}
+
+.contact:not(.-light) form input,
+.contact:not(.-light) form textarea {
+    color: var(--bs-white);
+}
