@@ -1,5 +1,7 @@
 import Header from '@/components/header/header'
+import Footer from '@/components/footer/footer'
 import { Montserrat } from "next/font/google";
+import ScrollToTop from "@/components/scroll-to-top/scroll-to-top";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -19,6 +21,8 @@ export default function RootLayout({ children }) {
         <Header />
         <BootstrapClient />
         {children}
+        <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
