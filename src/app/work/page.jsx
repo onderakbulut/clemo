@@ -1,4 +1,9 @@
-import Works from "@/components/works/works";
+import dynamic from 'next/dynamic'
+
+const Works = dynamic(
+    () => import('@/components/works/works'),
+    { ssr: false }
+  )
 function Work() {
     return ( 
         <div>
